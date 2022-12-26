@@ -18,4 +18,11 @@ app.use('/', (req, res) => {
 app.use('/api/v1', api);
 
 
+app.use('*', (req, res) => {
+    res.status(404).json({
+        status: 'failed',
+        message: 'Not found'
+    });
+});
+
 module.exports = app;

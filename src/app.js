@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
     res.send('news-api');
 });
 app.use('/api/v1', api);

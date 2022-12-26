@@ -52,7 +52,7 @@ exports.loginUser = async (req, res) => {
         }
 
         const validPassword = await user.comparePassword(password);
-        console.log(validPassword);
+
         if (!validPassword) {
             return res.status(401).json({
                 status: 'failed',

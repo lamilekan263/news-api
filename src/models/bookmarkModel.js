@@ -27,7 +27,7 @@ const bookmarkSchema = mongoose.Schema({
         type: String,
         required: [true, 'url is required']
     },
-    userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
+    createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
 });
 
 
